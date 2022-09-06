@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   ingredient.init(
     {
       text: DataTypes.STRING,
-      amount: DataTypes.STRING,
+      amount: DataTypes.INTEGER,
+      units: DataTypes.STRING,
     },
     {
       sequelize,
