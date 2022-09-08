@@ -47,35 +47,33 @@ router.get("/:id", async (req, res) => {
 });
 
 //Form for posting recipes.
-//http POST :4000/recipe/20 title="sweets" videoUrl="www.photo"
+//http POST :4000/recipe/ title="sweets" videoUrl="www.photo"
 
-// router.post("/:id", async (req, res) => {
-//   const currentUser = await User.findByPk(req.params.id);
-//   console.log(currentUser);
+router.post("/", auth, async (req, res) => {
+  const { title, videoUrl, time, serving, steps, ingredients } = req.body;
 
-//   const currentRecipe = await Recipe.findByPk();
+  const newRecipe = await Recipe.create({
+    title,
+    videoUrl,
+    time,
+    serving,
+    steps,
+    userId: req.user.id,
+  });
 
-//   const { title, videoUrl, ingredients } = req.body;
+  const addIngredients = ingredients.map(async (item) => {
+    const newIngredients = await Ingredient.create({
+      text: item.text,
+      amount: item.amount,
+      units: item.units,
+      recipeId: newRecipe.id,
+    });
+    return newIngredients;
+  });
 
-//   const newRecipe = await Recipe.create({
-//     title,
-//     videoUrl,
-//     //userId: currentUser.id,
-//   });
+  await Promise.all(addIngredients);
 
-//   const addIngredients = ingredients.map(async (item) => {
-//     const newIngredients = await Ingredient.create({
-//       text: item.text,
-//       amount: item.amount,
-//       units: item.units,
-//       recipeId: newRecipe.id,
-//     });
-//     return newIngredients;
-//   });
-
-//   await Promise.all(addIngredients);
-
-//   return res.status(201).send({ message: "Recipes created", newRecipe });
-// });
+  return res.status(201).send({ message: "Recipes created", newRecipe });
+});
 
 module.exports = router;
