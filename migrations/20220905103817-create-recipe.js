@@ -25,6 +25,7 @@ module.exports = {
       },
       isPublic: {
         type: Sequelize.BOOLEAN,
+        defaultValue: true,
       },
       steps: {
         type: Sequelize.TEXT,

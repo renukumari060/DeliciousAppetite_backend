@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       time: DataTypes.STRING,
       serving: DataTypes.STRING,
       isPublic: DataTypes.BOOLEAN,
+      isPublic: { type: DataTypes.BOOLEAN, defaultValue: true },
       steps: DataTypes.TEXT,
     },
     {

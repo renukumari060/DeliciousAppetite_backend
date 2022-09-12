@@ -20,6 +20,34 @@ module.exports = {
         // },
 
         {
+          title: "Samosa",
+          imageUrl: "imageUrl",
+          videoUrl: "https://www.youtube.com/embed/AAm95jaoAJc&t=300s",
+          time: "time duration",
+          serving: "string",
+          isPublic: true,
+          steps: "steps to prepare",
+          userId: 1,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          title: "Samosa recipe",
+          imageUrl: "imageUrl",
+          videoUrl: "https://www.youtube.com/embed/AAm95jaoAJc&t",
+          time: "time duration",
+          serving: "string",
+          isPublic: true,
+          steps: "steps to prepare",
+          userId: 1,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
           title: "Modak Recipe",
           imageUrl: "https://source.unsplash.com/1600x900/?modak",
           videoUrl: "https://www.youtube.com/embed/KcXhD7vAYmo",
