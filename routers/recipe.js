@@ -96,6 +96,27 @@ router.get("/category", async (req, res, next) => {
   }
 });
 
+//MyRecipes:
+//http GET :4000/recipe/myrecipes
+
+router.get("/myrecipes", auth, async (req, res, next) => {
+  try {
+    const myrecipes = await Recipe.findAll({
+      where: { userId: req.user.id },
+      include: [Ingredient],
+    });
+    console.log(myrecipes);
+    if (!myrecipes) {
+      res.status(404).send("Recipes not found!");
+    } else {
+      res.json(myrecipes);
+    }
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
 
