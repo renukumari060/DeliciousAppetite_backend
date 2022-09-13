@@ -14,25 +14,21 @@ module.exports = {
 
         {
           categoryName: "Breakfast",
-          recipeId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           categoryName: "Lunch",
-          recipeId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           categoryName: "Snacks",
-          recipeId: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           categoryName: "Dinner",
-          recipeId: 4,
           createdAt: new Date(),
           updatedAt: new Date(),
         },

@@ -12,10 +12,10 @@ module.exports = {
       onDelete: "SET NULL",
     });
 
-    await queryInterface.addColumn("categories", "recipeId", {
+    await queryInterface.addColumn("recipes", "categoryId", {
       type: Sequelize.INTEGER,
       references: {
-        model: "recipes",
+        model: "categories",
         key: "id",
       },
       onUpdate: "CASCADE",
@@ -45,7 +45,7 @@ module.exports = {
 
   async down(queryInterface, Sequelize) {
     await queryInterface.removeColumn("recipes", "userId");
-    await queryInterface.removeColumn("categories", "recipeId");
+    await queryInterface.removeColumn("recipes", "categoryId");
     await queryInterface.removeColumn("comments", "recipeId");
     await queryInterface.removeColumn("ingredients", "recipeId");
   },

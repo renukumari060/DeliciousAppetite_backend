@@ -20,28 +20,15 @@ module.exports = {
         // },
 
         {
-          title: "Samosa",
-          imageUrl: "imageUrl",
-          videoUrl: "https://www.youtube.com/embed/AAm95jaoAJc&t=300s",
-          time: "time duration",
-          serving: "string",
-          isPublic: true,
-          steps: "steps to prepare",
-          userId: 1,
-
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-
-        {
           title: "Samosa recipe",
           imageUrl: "imageUrl",
-          videoUrl: "https://www.youtube.com/embed/AAm95jaoAJc&t",
+          videoUrl: "https://www.youtube.com/embed/AAm95jaoAJc",
           time: "time duration",
           serving: "string",
           isPublic: true,
           steps: "steps to prepare",
           userId: 1,
+          categoryId: 1,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -57,6 +44,7 @@ module.exports = {
           steps:
             "firstly, take a ball sized rice flour dough and flatten it.with the help of both thumbs start pressing the edges and create a dent in the centre.slowly press from edges till it forms a cup.start creating pleats with your index finger and thumb.now scoop a tbsp of prepared coconut-jaggery stuffing.get the pleats together to form a bundle.close the top by pinching and making it pointed.",
           userId: 1,
+          categoryId: 3,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -70,6 +58,7 @@ module.exports = {
           isPublic: true,
           steps: "step 1: take a ball sized rice flour dough and flatten it",
           userId: 1,
+          categoryId: 1,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -83,6 +72,7 @@ module.exports = {
           isPublic: true,
           steps: "steps to prepare",
           userId: 2,
+          categoryId: 2,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -96,6 +86,7 @@ module.exports = {
           isPublic: true,
           steps: "steps to prepare",
           userId: 2,
+          categoryId: 1,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -109,6 +100,7 @@ module.exports = {
           isPublic: true,
           steps: "steps to prepare",
           userId: 3,
+          categoryId: 1,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -122,6 +114,7 @@ module.exports = {
           isPublic: false,
           steps: "steps to prepare",
           userId: 3,
+          categoryId: 2,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -135,6 +128,7 @@ module.exports = {
           isPublic: true,
           steps: "steps to prepare",
           userId: 4,
+          categoryId: 4,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -148,6 +142,7 @@ module.exports = {
           isPublic: false,
           steps: "steps to prepare",
           userId: 4,
+          categoryId: 1,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -161,6 +156,7 @@ module.exports = {
           isPublic: false,
           steps: "steps to prepare",
           userId: 1,
+          categoryId: 3,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -174,6 +170,7 @@ module.exports = {
           isPublic: true,
           steps: "steps to prepare",
           userId: 1,
+          categoryId: 2,
 
           createdAt: new Date(),
           updatedAt: new Date(),
