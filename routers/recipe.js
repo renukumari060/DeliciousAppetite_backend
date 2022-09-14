@@ -4,6 +4,7 @@ const Recipe = require("../models").recipe;
 const Ingredient = require("../models").ingredient;
 const Category = require("../models").category;
 const User = require("../models").user;
+const Comment = require("../models").comment;
 const router = new Router();
 
 //Homepage:
@@ -13,7 +14,7 @@ router.get("/", async (req, res, next) => {
   try {
     const recipes = await Recipe.findAll({
       where: { isPublic: true },
-      include: [Ingredient],
+      include: [Ingredient, Comment],
     });
     console.log(recipes);
     if (!recipes) {
@@ -26,8 +27,6 @@ router.get("/", async (req, res, next) => {
     next(e);
   }
 });
-
-//DetailsPage:
 
 //Form for posting recipes.
 //http POST :4000/recipe/ title="sweets" videoUrl="www.photo"
@@ -117,17 +116,43 @@ router.get("/myrecipes", auth, async (req, res, next) => {
   }
 });
 
+//Form for posting comment.
+//http POST :4000/recipe/comment/ comment="nice"
+
+router.post("/:recipeId", auth, async (req, res, next) => {
+  try {
+    const { recipeId } = req.params;
+    const { comment, rating } = req.body;
+
+    console.log("user", req.user);
+
+    const newComment = await Comment.create({
+      commentContent: comment,
+      userName: req.user.name,
+      userId: req.user.id,
+      recipeId,
+      rating,
+    });
+
+    return res.status(201).send({ message: "Comment Added", newComment });
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
+//DetailsPage:
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
 
-  //console.log("details id", id);
+  console.log("details id", id);
 
   if (isNaN(parseInt(id))) {
     return res.status(400).send({ message: "Recipe id is not a number" });
   }
 
   const recipe = await Recipe.findByPk(id, {
-    include: [Ingredient],
+    include: [Ingredient, Comment],
     order: [[Ingredient, "createdAt", "DESC"]],
   });
   console.log(recipe);

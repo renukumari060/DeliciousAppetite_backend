@@ -23,7 +23,6 @@ module.exports = (sequelize, DataTypes) => {
   recipe.init(
     {
       title: DataTypes.STRING,
-      imageUrl: DataTypes.TEXT,
       videoUrl: DataTypes.TEXT,
       time: DataTypes.STRING,
       serving: DataTypes.STRING,

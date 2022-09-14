@@ -11,9 +11,7 @@ module.exports = {
       title: {
         type: Sequelize.STRING,
       },
-      imageUrl: {
-        type: Sequelize.TEXT,
-      },
+
       videoUrl: {
         type: Sequelize.TEXT,
       },
