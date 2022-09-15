@@ -34,6 +34,13 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: "Deep",
+          email: "deep",
+          password: bcrypt.hashSync("deep", 10),
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );

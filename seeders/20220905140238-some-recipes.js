@@ -26,7 +26,7 @@ module.exports = {
           steps:
             "Firstly, to the hot sugar syrup, add prepared boondi.Mix well and make sure to coat all the boondi with sugar syrupContinue to cook for 2 -3 minutes or until sugar syrup thickens.Cover and keep aside for 10 minutes.After 10 minutes, sugar syrup is absorbed completely by boondi.Add 2 tbsp cashew and 2 tbsp pistachios. mix well.You can see the the mixture is dried and all the sugar syrup has absorbed.Prepare the ladoo taking a small amount of boondi. add milk if required, to make moist laddu.Finally, motichoor laddo is ready to be served or refrigerate for a week.",
           userId: 4,
-          categoryId: 1,
+          categoryId: 3,
 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -35,7 +35,7 @@ module.exports = {
         {
           title: "Samosa recipe",
           videoUrl: "https://www.youtube.com/embed/AAm95jaoAJc",
-          time: "time duration",
+          time: "25 minutes",
           serving: "string",
           isPublic: true,
           steps:
@@ -69,7 +69,7 @@ module.exports = {
           serving: "string",
           isPublic: true,
           steps: "steps to prepare",
-          userId: 2,
+          userId: 4,
           categoryId: 2,
 
           createdAt: new Date(),
@@ -82,7 +82,7 @@ module.exports = {
           serving: "string",
           isPublic: true,
           steps: "steps to prepare",
-          userId: 2,
+          userId: 4,
           categoryId: 1,
 
           createdAt: new Date(),
@@ -95,7 +95,7 @@ module.exports = {
           serving: "string",
           isPublic: true,
           steps: "steps to prepare",
-          userId: 3,
+          userId: 4,
           categoryId: 1,
 
           createdAt: new Date(),
@@ -108,7 +108,7 @@ module.exports = {
           serving: "string",
           isPublic: true,
           steps: "steps to prepare",
-          userId: 3,
+          userId: 4,
           categoryId: 2,
 
           createdAt: new Date(),
@@ -162,6 +162,71 @@ module.exports = {
           steps: "steps to prepare",
           userId: 1,
           categoryId: 2,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: "Besan Dosa",
+          videoUrl: "https://www.youtube.com/embed/W0CTsHFL9hk",
+          time: "20 minutes",
+          serving: "3 people",
+          isPublic: true,
+          steps: "steps to prepare",
+          userId: 4,
+          categoryId: 1,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: "Thekua recipe",
+          videoUrl: "https://www.youtube.com/embed/mPVmSgTtHOU",
+          time: "40 minutes",
+          serving: "20 pcs",
+          isPublic: true,
+          steps: "steps to prepare",
+          userId: 1,
+          categoryId: 3,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: "Sabudana Vada",
+          videoUrl: "https://www.youtube.com/embed/xSTtb1Gi250",
+          time: "25 minutes",
+          serving: "3 people",
+          isPublic: true,
+          steps: "steps to prepare",
+          userId: 1,
+          categoryId: 3,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: "Dosa recipe",
+          videoUrl: "https://www.youtube.com/embed/CCab5oh0ZOc",
+          time: "30 minutes",
+          serving: "4 people",
+          isPublic: true,
+          steps: "steps to prepare",
+          userId: 1,
+          categoryId: 4,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: "Idli sambar",
+          videoUrl: "https://www.youtube.com/embed/_QLLo1b5Zcw",
+          time: "30 minutes",
+          serving: "4 people",
+          isPublic: true,
+          steps: "steps to prepare",
+          userId: 1,
+          categoryId: 4,
 
           createdAt: new Date(),
           updatedAt: new Date(),

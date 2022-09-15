@@ -152,7 +152,7 @@ router.get("/:id", async (req, res) => {
   }
 
   const recipe = await Recipe.findByPk(id, {
-    include: [Ingredient, Comment],
+    include: [Ingredient, Comment, Category],
     order: [[Ingredient, "createdAt", "DESC"]],
   });
   console.log(recipe);
