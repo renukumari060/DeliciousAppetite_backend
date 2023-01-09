@@ -56,7 +56,7 @@ router.post("/", auth, async (req, res, next) => {
       steps,
       isPublic,
       userId: req.user.id,
-      categoryId: category.id,
+      categoryId: category?.id,
     });
 
     const addIngredients = ingredients.map(async (item) => {
